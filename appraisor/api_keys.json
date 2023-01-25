@@ -1,0 +1,8 @@
+{
+    "app_id": {
+            "production" : "Flipwedg-GolfValu-PRD-69f1e332f-91f382a6",
+            "sandbox" : "Flipwedg-GolfValu-SBX-89c2f2941-cc4cd68d"
+        }, 
+    "dev_id":"4b2b68d0-8440-4901-a4b1-0cc58458b74a", 
+    "client_secret": "SBX-9c2f294116ca-4158-4312-b747-e06d"
+}

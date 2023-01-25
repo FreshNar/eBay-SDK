@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block title %} Value | Flipwedge {% endblock title %}
+
+{% block content %} 
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mx-auto py-2">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h4>Result of "{{ query }}"</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{{ img_src }}" alt=""class="w-100" style="height:235px; object-fit: contain;">
+                    <p>Flipwedge values <strong>{{ query }}</strong> at <strong>${{ value }}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %} 

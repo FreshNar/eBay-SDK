@@ -1,0 +1,167 @@
+{% extends 'base.html' %} 
+
+{% block title %} Clubhouse API | Flipwedge {% endblock title %} 
+
+{% block content %} 
+<div class="container-fluid">
+  <div class="row py-4">
+    <div class="col-12 col-md-6 mx-auto">
+      <div class="card py-3">
+        <div class="card-header bg-white text-center border-0">
+          <img src="https://assets.website-files.com/62040685b376d257ce6c9ee2/63b4744555460268aa0d695e_Pacific_SC_872-p-500.png" height="50px" alt="">
+        </div>
+        <div class="card-body">
+          <div class="text-center fw-medium">
+            <h4>Clubhouse API</h4>
+            FlipWedge is the future of buying and selling pre-owned golf equipment online.
+          </div>
+          <form action="/value/" class="py-3" method="post">
+            {% csrf_token %}
+            <div class="form-group mt-3">
+              <label class="form-label" for="valueSearch">Type:</label>
+              <select name="type" class="form-control" id="">
+                <option value="iron set">Iron</option>
+              </select>
+            </div>
+            <div class="form-group mt-3">
+              <label class="form-label" for="valueSearch">Brand:</label>
+              <select name="brand" class="form-control" id="">
+                <option value="Taylor Made">Taylor Made</option>
+              </select>
+            </div>
+            <div class="form-group mt-3">
+              <label class="form-label" for="valueSearch">Club:</label>
+              <select name="product" class="form-control">
+                <option value="320">320   </option>
+                <option value="AeroBurner">AeroBurner   </option>
+                <option value="AeroBurner HL">AeroBurner HL   </option>
+                <option value="Burner '09 (Version 1)">Burner '09 (Version 1)   </option>
+                <option value="Burner '09 (Version 2)">Burner '09 (Version 2)  </option>
+                <option value="Burner (Japan Model)">Burner (Japan Model)   </option>
+                <option value="Burner 2.0">Burner 2.0   </option>
+                <option value="Burner C">Burner C   </option>
+                <option value="Burner Plus">Burner Plus   </option>
+                <option value="Burner Plus C">Burner Plus C   </option>
+                <option value="Burner Superfast 3.0">Burner Superfast 3.0   </option>
+                <option value="Burner Superlaunch">Burner Superlaunch   </option>
+                <option value="Burner XD">Burner XD   </option>
+                <option value="GAPR LO">GAPR LO   </option>
+                <option value="GAPR MID">GAPR MID   </option>
+                <option value="Gloire">Gloire (5) </option>
+                <option value="Gloire (Ladies)">Gloire (Ladies)   </option>
+                <option value="Gloire (Version 2)">Gloire (Version 2)   </option>
+                <option value="Gloire (Version 3)">Gloire (Version 3)   </option>
+                <option value="Gloire (Version 4)">Gloire (Version 4)   </option>
+                <option value="Gloire Forged">Gloire Forged   </option>
+                <option value="Gloire Forged (Version 2)">Gloire Forged (Version 2)   </option>
+                <option value="Gloire Forged 2016">Gloire Forged 2016   </option>
+                <option value="Gloire G">Gloire G   </option>
+                <option value="Gloire G (Version 2)">Gloire G (Version 2)   </option>
+                <option value="Kalea">Kalea   </option>
+                <option value="M CGB">M CGB   </option>
+                <option value="M Gloire">M Gloire   </option>
+                <option value="M1">M1   </option>
+                <option value="M2 (Version 1)">M2 (Version 1)   </option>
+                <option value="M2 (Version 2)">M2 (Version 2)   </option>
+                <option value="M2 Tour">M2 Tour   </option>
+                <option value="M3">M3   </option>
+                <option value="M4">M4   </option>
+                <option value="M5">M5   </option>
+                <option value="P-7MC (Version 1)">P-7MC (Version 1)   </option>
+                <option value="P-7MC (Version 2)">P-7MC (Version 2)   </option>
+                <option value="P-7TW">P-7TW   </option>
+                <option value="P•770 (Version 1)">P•770 (Version 1)   </option>
+                <option value="P•770 (Version 2)">P•770 (Version 2)   </option>
+                <option value="P•770 (Version 3)">P•770 (Version 3)   </option>
+                <option value="P•7MB (Version 1)">P•7MB (Version 1)   </option>
+                <option value="P•7MB (Version 2)">P•7MB (Version 2)   </option>
+                <option value="P750 Tour Proto">P750 Tour Proto   </option>
+                <option value="P760">P760   </option>
+                <option value="P790 (Version 1)">P790 (Version 1)   </option>
+                <option value="P790 (Version 2)">P790 (Version 2)   </option>
+                <option value="P790 (Version 3)">P790 (Version 3)   </option>
+                <option value="P790Ti">P790Ti   </option>
+                <option value="PSi">PSi   </option>
+                <option value="PSi Tour">PSi Tour   </option>
+                <option value="R11">R11   </option>
+                <option value="R360XD">R360XD   </option>
+                <option value="r5">r5   </option>
+                <option value="r5 XL Plus">r5 XL Plus   </option>
+                <option value="r7">r7   </option>
+                <option value="r7 CGB Max (Version 1)">r7 CGB Max (Version 1)   </option>
+                <option value="r7 CGB Max (Version 2)">r7 CGB Max (Version 2)   </option>
+                <option value="r7 Draw">r7 Draw   </option>
+                <option value="r7 Forged">r7 Forged   </option>
+                <option value="r7 Ti">r7 Ti   </option>
+                <option value="r7 TP">r7 TP   </option>
+                <option value="R7 XR Ti-Face">R7 XR Ti-Face   </option>
+                <option value="R9">R9   </option>
+                <option value="r9 (Japan Version)">r9 (Japan Version)   </option>
+                <option value="r9 Forged">r9 Forged   </option>
+                <option value="r9 Max (Japan Version)">r9 Max (Japan Version)   </option>
+                <option value="R9 TP">R9 TP   </option>
+                <option value="R9 TP (Tour) (Version 1)">R9 TP (Tour) (Version 1)   </option>
+                <option value="R9 TP (Tour) (Version B)">R9 TP (Tour) (Version B)   </option>
+                <option value="rac Lt (Version 1)">rac Lt (Version 1)   </option>
+                <option value="rac Lt (Version 2)">rac Lt (Version 2)   </option>
+                <option value="rac MB">rac MB   </option>
+                <option value="rac OS (Version 1)">rac OS (Version 1)   </option>
+                <option value="rac OS (Version 2)">rac OS (Version 2)   </option>
+                <option value="rac r7 XD">rac r7 XD   </option>
+                <option value="rac TP Forged">rac TP Forged   </option>
+                <option value="rac TP MB Forged">rac TP MB Forged   </option>
+                <option value="rac TP MB ZTP Forged">rac TP MB ZTP Forged   </option>
+                <option value="RBZ">RBZ   </option>
+                <option value="RBZ Max">RBZ Max   </option>
+                <option value="RBZ SL">RBZ SL   </option>
+                <option value="RocketBladez (Version 1)">RocketBladez (Version 1)   </option>
+                <option value="RocketBladez (Version 2)">RocketBladez (Version 2)   </option>
+                <option value="RocketBladez Max">RocketBladez Max   </option>
+                <option value="RocketBladez Tour">RocketBladez Tour   </option>
+                <option value="RocketBladez Tour TI1">RocketBladez Tour TI1   </option>
+                <option value="RSi 1">RSi 1   </option>
+                <option value="RSi 2">RSi 2   </option>
+                <option value="RSi TP">RSi TP  </option>
+                <option value="RSi TP UDI">RSi TP UDI (5) </option>
+                <option value="SIM DHY">SIM DHY (4) </option>
+                <option value="SIM Gloire">SIM Gloire   </option>
+                <option value="SIM Max">SIM Max   </option>
+                <option value="SIM Max OS">SIM Max OS   </option>
+                <option value="SIM UDI">SIM UDI   </option>
+                <option value="SIM2 Max">SIM2 Max   </option>
+                <option value="SIM2 Max OS">SIM2 Max OS   </option>
+                <option value="SLDR">SLDR   </option>
+                <option value="SpeedBlade">SpeedBlade   </option>
+                <option value="Stealth">Stealth   </option>
+                <option value="Stealth DHY">Stealth DHY (4) </option>
+                <option value="Stealth Gloire">Stealth Gloire   </option>
+                <option value="Stealth UDI">Stealth UDI   </option>
+                <option value="Tour Burner">Tour Burner   </option>
+                <option value="Tour Burner TP Utility Irons">Tour Burner TP Utility Irons   </option>
+                <option value="Tour Preferred">Tour Preferred   </option>
+                <option value="Tour Preferred (Blade)">Tour Preferred (Blade)   </option>
+                <option value="Tour Preferred CB">Tour Preferred CB   </option>
+                <option value="Tour Preferred CB Forged">Tour Preferred CB Forged   </option>
+                <option value="Tour Preferred MB">Tour Preferred MB   </option>
+                <option value="Tour Preferred MB Forged">Tour Preferred MB Forged   </option>
+                <option value="Tour Preferred MC">Tour Preferred MC   </option>
+                <option value="Tour Preferred MC Forged">Tour Preferred MC Forged   </option>
+                <option value="TP Forged">TP Forged   </option>
+                <option value="TP Forged (Satin)">TP Forged (Satin)   </option>
+                <option value="TP MB Smoke">TP MB Smoke   </option>
+                <option value="TP ZTP Forged">TP ZTP Forged   </option>
+                <option value="V10 Forged">V10 Forged   </option>
+                <option value="V721 Tour Version Forged">V721 Tour Version Forged   </option>
+                <option value="XR Forged">XR Forged   </option>
+              </select>
+            </div>
+            <div>
+              <button class="mt-2 w-100 btn btn-primary" type="submit">Find Value</button>          
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %} 
